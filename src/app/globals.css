@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: 250 250 250;
+    --bg-secondary: 244 244 245;
+    --border-color: 228 228 231;
+    --text-primary: 9 9 11;
+    --accent-red: 225 29 72;
+    --accent-red-hover: 190 24 74;
+  }
+
+  .dark {
+    --bg-primary: 9 9 11;
+    --bg-secondary: 20 20 23;
+    --border-color: 39 39 42;
+    --text-primary: 250 250 250;
+    --accent-red: 225 29 72;
+    --accent-red-hover: 244 63 94;
+  }
+
+  body {
+    @apply antialiased overflow-x-hidden;
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply backdrop-blur-md bg-white/70 border border-neutral-200/50 dark:bg-[#121215]/75 dark:border-neutral-800/40;
+}
+
+.glass-premium {
+  @apply backdrop-blur-xl bg-white/80 border border-white/20 dark:bg-black/40 dark:border-white/5;
+}
+
+/* Glowing text effects */
+.glow-text-red {
+  text-shadow: 0 0 10px rgba(225, 29, 72, 0.4);
+}
+
+.glow-border-red {
+  box-shadow: 0 0 15px rgba(225, 29, 72, 0.15);
+}
+
+/* Customized scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 dark:bg-neutral-800 rounded-full hover:bg-neutral-400 dark:hover:bg-neutral-700 transition-colors;
+}
+
+/* Animation presets */
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 10s infinite ease-in-out;
+}
+
+/* Typography grids for Kana practice */
+.kana-practice-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(128, 128, 128, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.08) 1px, transparent 1px);
+}
+
+.dark .kana-practice-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}

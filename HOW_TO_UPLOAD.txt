@@ -1,0 +1,14 @@
+✨ NIHONPATH - GITHUB & VERCEL UPLOAD INSTRUCTIONS ✨
+
+To prevent the "Couldn't find any 'pages' or 'app' directory" build error, you MUST NOT upload the "NihonPath" folder itself. You must upload ONLY the files INSIDE this folder.
+
+Here is the exact step-by-step method:
+
+Step 1: Open your GitHub repository in your web browser.
+Step 2: Click on "Add file" -> "Upload files".
+Step 3: Inside this "NihonPath" folder on your computer:
+        - Press "Ctrl + A" to select EVERYTHING (you should see 'src', 'package.json', 'tailwind.config.ts', etc. all highlighted).
+Step 4: Drag and drop all highlighted files and folders directly into the GitHub upload area in your web browser.
+Step 5: Scroll down, type a commit message, and click the green "Commit changes" button!
+
+Once committed, Vercel will automatically redeploy and find all directory files correctly in the root. 🚀
